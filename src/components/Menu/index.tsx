@@ -16,7 +16,7 @@ const Menu: React.FC<{ match: any }> = ({ match }) => {
       </a>
       <ul className="menu-items">
         <li className={`menu-item ${page === 0 && "selected"}`}>
-          <Link to="/setup/dashboard" onClick={() => setPage(0)}>
+          <Link to="/setup" onClick={() => setPage(0)}>
             <span className="marker"></span>
             <DashBoardSvg />
             <span className="label">Dashboard</span>

@@ -26,11 +26,7 @@ const Pages: React.FC<{ history: any; match: any }> = ({ match }) => {
         </div>
         <div className="main">
           <Switch>
-            <Route
-              path={`${match.url}/dashboard`}
-              exact
-              component={DashBoard}
-            />
+            <Route path={`${match.url}`} exact component={DashBoard} />
             <Route path={`${match.url}/recovery`} exact component={Recovery} />
             <Route
               path={`${match.url}/investment`}

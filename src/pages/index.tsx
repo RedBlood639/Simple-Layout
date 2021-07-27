@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import "./style.scss";
 
 const Menu = React.lazy(() => import("../components/Menu"));
+const MobileMenu = React.lazy(() => import("../components/MobileMenu"));
 const TopBar = React.lazy(() => import("../components/TopBar"));
 //pages
 const DashBoard = React.lazy(() => import("../pages/DashBoard"));
@@ -10,19 +11,21 @@ const Recovery = React.lazy(() => import("../pages/Recovery"));
 const Investment = React.lazy(() => import("../pages/Investment"));
 const Pages: React.FC<{ history: any; match: any }> = ({ match }) => {
   const [opened, setOpened] = useState(false);
-
+  const handleSidebar = () => {
+    setOpened(!opened);
+  };
   return (
     <div className="page">
       <div className="desktop-menu">
-        <Menu match={match} />
+        <Menu />
       </div>
       {/* mobile */}
-      {/* <div className={`mobile-menu  ${opened && "opened"}`}>
-        <Menu />
-      </div> */}
+      <div className={`mobile-menu  ${opened && "opened"}`}>
+        <MobileMenu handleSidebar={handleSidebar} />
+      </div>
       <div className="content">
         <div className="topbar">
-          <TopBar />
+          <TopBar handleSidebar={handleSidebar} />
         </div>
         <div className="main">
           <Switch>

@@ -15,24 +15,34 @@
   }
   .card-items {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr 1fr;
     border: 0 solid var(--color-white-3);
     gap: 1.5rem;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
     .card-item {
       border-radius: 0.5rem;
       position: relative;
       height: auto;
       align-items: center;
       background-color: var(--color-black-1);
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      @media screen and (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+      }
+
       .card-image {
-        flex: 0 1 40%;
         display: flex;
         justify-content: center;
         border: 0 solid var(--color-white-3);
+
         img {
-          width: 100%;
-          max-width: 80px;
+          width: 80px;
+
           object-fit: contain;
           height: auto;
         }

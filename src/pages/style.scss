@@ -1,6 +1,7 @@
 .page {
   display: flex;
   height: 100%;
+
   .desktop-menu {
     width: 16rem;
     background-color: var(--color-black-1);
@@ -8,9 +9,13 @@
     padding-top: 1rem;
     overflow-y: auto;
     flex-shrink: 0;
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
   }
 
   .mobile-menu {
+    margin-top: 4.3rem;
     top: 0;
     left: 0;
     width: 19rem;
@@ -30,6 +35,7 @@
     flex: 1 1;
     flex-direction: column;
     display: flex;
+
     .topbar {
       padding-left: 1.5rem;
       padding-right: 1.2rem;

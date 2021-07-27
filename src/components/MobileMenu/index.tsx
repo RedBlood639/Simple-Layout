@@ -5,8 +5,10 @@ import DashBoardSvg from "../../assets/icons/DashBoardSvg";
 import RecoverySvg from "../../assets/icons/RecoverySvg";
 import InvestSvg from "../../assets/icons/InvestSvg";
 import "./style.scss";
-
-const Menu: React.FC = () => {
+type TopBarProps = {
+  handleSidebar: () => void;
+};
+const MobileMenu: React.FC<TopBarProps> = ({ handleSidebar }) => {
   const [page, setPage] = useState<number>(0);
   return (
     <div className="menu-container">
@@ -15,21 +17,30 @@ const Menu: React.FC = () => {
         <span>The TIKI Bar</span>
       </a>
       <ul className="menu-items">
-        <li className={`menu-item ${page === 0 && "selected"}`}>
+        <li
+          className={`menu-item ${page === 0 && "selected"}`}
+          onClick={handleSidebar}
+        >
           <Link to="/setup" onClick={() => setPage(0)}>
             <span className="marker"></span>
             <DashBoardSvg />
             <span className="label">Dashboard</span>
           </Link>
         </li>
-        <li className={`menu-item ${page === 1 && "selected"}`}>
+        <li
+          className={`menu-item ${page === 1 && "selected"}`}
+          onClick={handleSidebar}
+        >
           <Link to="/setup/recovery" onClick={() => setPage(1)}>
             <span className="marker"></span>
             <RecoverySvg />
             <span className="label">Recovery</span>
           </Link>
         </li>
-        <li className={`menu-item ${page === 2 && "selected"}`}>
+        <li
+          className={`menu-item ${page === 2 && "selected"}`}
+          onClick={handleSidebar}
+        >
           <Link to="/setup/investment" onClick={() => setPage(2)}>
             <span className="marker"></span>
             <InvestSvg />
@@ -41,4 +52,4 @@ const Menu: React.FC = () => {
   );
 };
 
-export default Menu;
+export default MobileMenu;

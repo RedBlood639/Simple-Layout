@@ -1,0 +1,49 @@
+.page {
+  display: flex;
+  height: 100%;
+  .desktop-menu {
+    width: 16rem;
+    background-color: var(--color-black-1);
+    z-index: 30;
+    padding-top: 1rem;
+    overflow-y: auto;
+    flex-shrink: 0;
+  }
+
+  .mobile-menu {
+    top: 0;
+    left: 0;
+    width: 19rem;
+    height: 100%;
+    z-index: 29;
+    padding-top: 1rem;
+    position: fixed;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    background-color: var(--color-black-1);
+  }
+  .opened {
+    transform: translateX(0);
+  }
+  .content {
+    width: 100%;
+    flex: 1 1;
+    flex-direction: column;
+    display: flex;
+    .topbar {
+      padding-left: 1.5rem;
+      padding-right: 1.2rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      z-index: 40;
+      background-color: var(--color-black-1);
+    }
+    .main {
+      overflow-y: auto;
+      height: 100%;
+      padding: 0 1.5rem;
+      background-color: var(--color-black-2);
+      padding-bottom: 2.7rem;
+    }
+  }
+}

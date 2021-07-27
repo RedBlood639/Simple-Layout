@@ -1,0 +1,25 @@
+@import "colors.scss";
+body::-webkit-scrollbar {
+  display: none;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica" !important;
+  line-height: 1.5;
+}
+.app-container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100% !important;
+  height: 100vh;
+}
+p {
+  margin: 0;
+  padding: 0;
+}

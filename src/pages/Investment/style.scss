@@ -1,0 +1,94 @@
+.invest-container {
+  display: grid;
+  margin: 0 auto;
+  h1 {
+    color: var(--color-gray-8);
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  p {
+    color: var(--color-gray-2);
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+  }
+  .card-items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: 0 solid var(--color-white-3);
+    gap: 1.5rem;
+    .card-item {
+      border-radius: 0.5rem;
+      position: relative;
+      height: auto;
+      align-items: center;
+      background-color: var(--color-black-1);
+      display: flex;
+      .card-image {
+        flex: 0 1 40%;
+        display: flex;
+        justify-content: center;
+        border: 0 solid var(--color-white-3);
+        img {
+          width: 100%;
+          max-width: 80px;
+          object-fit: contain;
+          height: auto;
+        }
+      }
+      .card-body {
+        flex: 1 0 0%;
+        min-width: 300px;
+        margin-bottom: 40px;
+        padding: 1rem;
+        border: 0 solid var(--color-white-3);
+        a {
+          color: var(--color-gray-2);
+          font-weight: 530;
+        }
+        .card-header-text {
+          font-size: 1.875rem;
+          color: var(--color-gray-2);
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+        }
+        .card-content-text {
+          margin-bottom: 1rem;
+          a {
+            text-decoration: none !important;
+            color: var(--color-gray-2);
+          }
+        }
+        .font-bold {
+          font-weight: 700;
+        }
+      }
+      .card-link {
+        margin-bottom: 1rem;
+        a {
+          color: var(--color-gray-2);
+        }
+      }
+      .card-footer {
+        bottom: 0;
+        position: absolute;
+        border-top: 1px solid var(--color-black-3);
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+
+        div {
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+          padding-left: 20px;
+          label {
+            color: var(--color-gray-2);
+          }
+        }
+      }
+    }
+  }
+}

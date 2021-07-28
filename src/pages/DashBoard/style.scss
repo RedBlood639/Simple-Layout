@@ -111,12 +111,12 @@
       align-items: center;
       display: flex;
       button {
-        opacity: 0.5;
+        // opacity: 0.5;
         transition-duration: 0.15s;
         transition-property: background-color, border-color, color, fill, stroke;
         width: 100%;
         vertical-align: bottom;
-        color: var(--color-gray-9);
+        color: var(--color-gray-11);
         padding: 0.5rem 1rem;
         line-height: 1.25rem;
         font-size: 1.125rem;

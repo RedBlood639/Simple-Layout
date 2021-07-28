@@ -131,7 +131,7 @@ const DashBoard: React.FC = () => {
       </div>
       <div className="div-3">
         <div className="div-3-1">
-          <button>Payout Is Processing</button>
+          <button>TIKI TO $PUPPY</button>
         </div>
       </div>
       {/*  */}

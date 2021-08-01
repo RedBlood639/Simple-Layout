@@ -1,1 +1,0 @@
-# Mindmail Admin panel

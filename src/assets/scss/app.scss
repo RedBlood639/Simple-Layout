@@ -8,8 +8,12 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Helvetica" !important;
+  font-family: "Mali" !important;
   line-height: 1.5;
+}
+input,
+button {
+  font-family: "Mali" !important;
 }
 .app-container {
   margin: 0;
